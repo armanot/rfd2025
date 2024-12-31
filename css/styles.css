@@ -18,8 +18,8 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    font-family: 'Lobster', cursive; /* Creative font for the title */
+    font-size: 3.5rem;
+    font-family: 'Lobster', cursive;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     color: #fff;
 }
@@ -28,7 +28,7 @@ header p {
     font-size: 1.5rem;
     margin: 10px 0 20px;
     color: #f9e6e4;
-    font-family: 'Pacifico', cursive; /* Secondary creative font */
+    font-family: 'Pacifico', cursive;
 }
 
 #countdown {
@@ -59,6 +59,7 @@ header p {
     bottom: 0;
     left: 50%;
     margin-left: -3px;
+    z-index: -1;
 }
 
 .day-title {
@@ -154,28 +155,30 @@ footer {
 
     .timeline {
         max-width: 100%;
+        padding: 0 10px;
     }
 
     .timeline::after {
-        display: none; /* Hide the vertical line for small screens */
-    }
-
-    .day-title {
-        font-size: 1.2rem;
+        left: 20px; /* Adjust the line position for mobile screens */
     }
 
     .timeline-item {
-        width: 90%; /* Full-width items for smaller screens */
+        width: 100%; /* Full-width items for smaller screens */
         margin: 10px auto;
-        font-size: 0.8rem;
+        padding-left: 40px; /* Add space for the timeline line */
+        position: relative;
     }
 
-    footer {
-        font-size: 0.7rem;
+    .timeline-item:nth-child(odd) {
+        left: 0;
     }
 
-    .name {
-        font-size: 0.9rem;
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item::after {
+        display: none; /* Hide arrows for mobile to simplify */
     }
 }
 
@@ -198,12 +201,11 @@ footer {
     }
 
     .timeline-item {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        padding-left: 30px;
     }
 
     .name {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
-
-   

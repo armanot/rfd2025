@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Day 2025</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hajah Rohani's Family Day 2025</h1>
+        <p>Villea Port Dickson Hotel</p>
+        <div id="countdown"></div>
+        <div id="family-names"></div>
+    </header>
+
+    <div class="timeline">
+        <!-- Day 1: 15 February -->
+        <div class="day-title">15 February 2025</div>
+        <div class="timeline-item">
+            <h2>3:00 PM</h2>
+            <p>Arrival and Check-In</p>
+            <h3>PIC:AQIL</h3>
+        </div>
+        <div class="timeline-item">
+            <h3>4:30-4:45 PM</h3>
+            <p>Solat Asar</p>
+        </div>
+        <div class="timeline-item">
+            <h2>4:45 PM - 7:00 PM</h2>
+            <h3><li>Aktiviti & Permainan Keluarga 1</li></h3>
+            <p>PIC:SYIDA <br>
+            Pembantu: Afiqah, Khadijah, Amar, Aidil</p>
+
+            <h3><li>Minuman dan Snek Ringan</li></h3>
+            <p>PIC: Yan <br>
+            Pembantu: Arisha</p>
+
+            <I>**Pakaian: T-Shirt warna biru</I>
+        </div>
+        <div class="timeline-item">
+            <h3>7:30-8:45 PM</h3>
+            <p>Solat Maghrib dan Isyak</p>
+        </div>
+        <div class="timeline-item">
+            <h2>8:50 - 11:00 PM</h2>
+            <h3><li>BBQ Keluarga</li></h3>
+            <p>PIC: Khairil <br> 
+            Pembantu: Syahir</p>
+            
+            <h3><li>Aktiviti & Permainan Keluarga 2</h3></li> 
+                <p>PIC: APIT, 
+                    Pembantu: Aqil, Zaidi, Arisha
+               </p>
+            
+            <h3><li>Pemenang Teka Kacang & Penyampaian Hadiah</h3></li> 
+               <p>PIC: Yana, 
+                   Pembantu: Khadijah, Amar
+              </p>
+    
+
+            <I>**Pakaian Tema: Mengikut keluarga</I>
+        </div>
+
+        <!-- Day 2: 16 February -->
+        <div class="day-title">16 February 2025</div>
+        <div class="timeline-item">
+            <h3>7:30 AM</h3>
+            <p>Breakfast - Hotel </p>
+        </div>
+        <div class="timeline-item">
+            <h3>9:00 AM - 11:30 PM</h3>
+            <p>BEBAS</p>
+        </div>
+        <div class="timeline-item">
+            <h3>12:00 NOON</h3>
+            <p>Check-Out</p>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Hajah Rohani Family Day Event. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function updateCountdown() {
+            const eventDate = new Date("2025-02-16T00:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerText = "The event is happening now!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerText =
+                `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+        }
+
+        // Add family names with JavaScript
+        const familyMembers = [
+            "Mak", "Along", "Abg Man", "Za", "Angah",
+            "Khairil", "Yana", "Syahir", "Syida", "APIT", "YaN", "aQiL", "zaiDi", "Arisha", 
+            "Afiqah", "Khadijah", "Amar", "Aidil", "Arisha", "Amirah", "adam","Sofea","Anas"
+        ];
+
+        const familyNamesContainer = document.getElementById("family-names");
+
+        familyMembers.forEach((name, index) => {
+            const nameElement = document.createElement("span");
+            nameElement.textContent = name;
+            nameElement.classList.add("name");
+            nameElement.style.animationDelay = `${index * 0.3}s`;
+            familyNamesContainer.appendChild(nameElement);
+        });
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

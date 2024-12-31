@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #c3c4fa, #6f8ff8);
+            color: #333;
+        }
+
+        header {
+            background-color: #4d41fd;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.9rem;
+            font-family: 'Lobster', cursive; /* Creative font for the title */
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 20px;
+            color: #f9e6e4;
+            font-family: 'Pacifico', cursive; /* Secondary creative font */
+        }
+
+        #countdown {
+            font-size: 3.5rem;
+            margin: 20px 0;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #1a204e;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #1a204e;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .day-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #fff;
+            background-color: #1a204e;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item {
+            padding: 8px 8px;
+            position: relative;
+            background: white;
+            border-radius: 6px;
+            margin: 10px 0;
+            width: 45%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 0.8rem;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            top: 15px;
+            right: -15px;
+            border-width: 10px 0 10px 15px;
+            border-color: transparent transparent transparent #1a204e;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            top: 15px;
+            left: -15px;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent #1a204e transparent transparent;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.6rem;
+            color: #666;
+        }
+
+        .name {
+            display: inline-block;
+            padding: 0 10px;
+            animation: fadeIn 2s ease-in-out infinite alternate;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0.2;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+   

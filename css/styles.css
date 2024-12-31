@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Orbitron:wght@400;700&display=swap');
 
 body {
     font-family: Arial, sans-serif;
@@ -18,7 +18,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-family: 'Lobster', cursive;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     color: #fff;
@@ -32,7 +32,8 @@ header p {
 }
 
 #countdown {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font for countdown */
     margin: 20px 0;
     padding: 10px 20px;
     border-radius: 10px;
@@ -41,6 +42,8 @@ header p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #1a204e;
     color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
 }
 
 .timeline {
